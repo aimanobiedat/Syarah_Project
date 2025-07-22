@@ -23,7 +23,6 @@ private WebDriver driver;
                 WebDriverManager.firefoxdriver().setup();
                 driver=new FirefoxDriver();
                 break;
-
             case "SAFARI" :
                 WebDriverManager.safaridriver().setup();
                 driver=new SafariDriver();
