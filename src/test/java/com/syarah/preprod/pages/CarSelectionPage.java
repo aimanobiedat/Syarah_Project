@@ -50,7 +50,7 @@ public class CarSelectionPage extends BasePage {
     public String getCarPrice() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(carPriceElement));
-
+//Ayman branch
 
         String priceText = carPriceElement.getText();
         return priceText.replaceAll("[^\\d]", "");
