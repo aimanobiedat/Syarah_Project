@@ -16,7 +16,7 @@ public class CarSelectionPage extends BasePage {
 
     @FindBy(xpath = "//a[@aria-label='كيا' or @aria-label='Kia']")
     private WebElement selectModel;
-
+//TEST
     @FindBy(xpath = "(//div[contains(@class,'absolute inset-0 transition-all duration-300 opacity-100')])[1]")
     private WebElement selectCar;
 
@@ -49,7 +49,6 @@ public class CarSelectionPage extends BasePage {
     public String getCarPrice() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(carPriceElement));
-
         String priceText = carPriceElement.getText();
         return priceText.replaceAll("[^\\d]", "");
     }
