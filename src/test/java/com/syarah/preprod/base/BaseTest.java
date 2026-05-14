@@ -4,9 +4,7 @@ import com.syarah.preprod.Factory.DriverFactory;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.time.Duration;
 
@@ -15,13 +13,13 @@ public class BaseTest {
 
     protected WebDriver driver;
 
-    @BeforeMethod
+    @BeforeClass
     public void setup() throws InterruptedException {
         driver = new DriverFactory().initializeDriver();
-        driver.get("https://preprod.syarah.com/");
+        driver.get("https://syarah.com/");
         }
 
-        @AfterMethod
+        @AfterClass
     public void teardown(){
 
         driver.quit();
